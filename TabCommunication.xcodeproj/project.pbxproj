@@ -13,6 +13,7 @@
 		FC3955CA27E9E0260060734C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC3955C827E9E0260060734C /* Main.storyboard */; };
 		FC3955CC27E9E0280060734C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC3955CB27E9E0280060734C /* Assets.xcassets */; };
 		FC3955CF27E9E0280060734C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC3955CD27E9E0280060734C /* LaunchScreen.storyboard */; };
+		FCD4E35A28119EBB00808073 /* CustTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD4E35928119EBB00808073 /* CustTabBarViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		FC3955CB27E9E0280060734C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FC3955CE27E9E0280060734C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FC3955D027E9E0280060734C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FCD4E35928119EBB00808073 /* CustTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustTabBarViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				FC3955C227E9E0260060734C /* AppDelegate.swift */,
 				FC3955C427E9E0260060734C /* SceneDelegate.swift */,
 				FC3955C627E9E0260060734C /* ViewControllers.swift */,
+				FCD4E35928119EBB00808073 /* CustTabBarViewController.swift */,
 				FC3955C827E9E0260060734C /* Main.storyboard */,
 				FC3955CB27E9E0280060734C /* Assets.xcassets */,
 				FC3955CD27E9E0280060734C /* LaunchScreen.storyboard */,
@@ -141,6 +144,7 @@
 				FC3955C727E9E0260060734C /* ViewControllers.swift in Sources */,
 				FC3955C327E9E0260060734C /* AppDelegate.swift in Sources */,
 				FC3955C527E9E0260060734C /* SceneDelegate.swift in Sources */,
+				FCD4E35A28119EBB00808073 /* CustTabBarViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

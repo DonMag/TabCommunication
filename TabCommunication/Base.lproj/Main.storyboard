@@ -51,12 +51,22 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JZA-mC-5Eb" customClass="TabView" customModule="TabCommunication" customModuleProvider="target">
+                                <rect key="frame" x="8" y="341" width="304" height="70"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="kIb-4o-QeL"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="WXO-eT-ffc"/>
-                        <color key="backgroundColor" red="0.45009386540000001" green="0.98132258650000004" blue="0.4743030667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="WXO-eT-ffc" firstAttribute="trailing" secondItem="JZA-mC-5Eb" secondAttribute="trailing" constant="8" id="1gs-hw-FUp"/>
                             <constraint firstItem="m6T-r0-2pb" firstAttribute="centerX" secondItem="oLb-1J-W8v" secondAttribute="centerX" id="cr8-9m-eN0"/>
+                            <constraint firstItem="WXO-eT-ffc" firstAttribute="bottom" secondItem="JZA-mC-5Eb" secondAttribute="bottom" constant="20" id="pIY-us-jFE"/>
                             <constraint firstItem="m6T-r0-2pb" firstAttribute="top" secondItem="WXO-eT-ffc" secondAttribute="top" constant="100" id="q5L-g1-8Ee"/>
+                            <constraint firstItem="JZA-mC-5Eb" firstAttribute="leading" secondItem="WXO-eT-ffc" secondAttribute="leading" constant="8" id="yFF-MF-4ML"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 3" image="3.square.fill" catalog="system" id="P8s-qA-v3j"/>
@@ -209,20 +219,54 @@ Its Title will show up in the 4th tab
                     <connections>
                         <segue destination="HZU-Lj-fzH" kind="relationship" relationship="viewControllers" id="7qE-up-1Gv"/>
                         <segue destination="8y7-DT-hx7" kind="relationship" relationship="viewControllers" id="bM4-51-GCb"/>
-                        <segue destination="j2g-Ye-Gof" kind="relationship" relationship="viewControllers" id="i9s-7P-bVO"/>
-                        <segue destination="HSb-Io-9Nc" kind="relationship" relationship="viewControllers" id="n35-k9-uCh"/>
+                        <segue destination="dgP-mE-QII" kind="relationship" relationship="viewControllers" id="6is-BU-j9Q"/>
+                        <segue destination="j2g-Ye-Gof" kind="relationship" relationship="viewControllers" id="Su4-JT-lFw"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EOy-eb-ePq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-827" y="-395"/>
         </scene>
+        <!--Center-->
+        <scene sceneID="H35-Yq-ywZ">
+            <objects>
+                <viewController id="dgP-mE-QII" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FYC-VM-ddc">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Center View Controller" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JuC-5K-4PK">
+                                <rect key="frame" x="74" y="100" width="172.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="5wE-sD-4dq"/>
+                        <color key="backgroundColor" red="0.94736550071022729" green="0.79257003452237706" blue="0.45370700019532101" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="JuC-5K-4PK" firstAttribute="centerX" secondItem="FYC-VM-ddc" secondAttribute="centerX" id="hLG-z8-78V"/>
+                            <constraint firstItem="JuC-5K-4PK" firstAttribute="top" secondItem="5wE-sD-4dq" secondAttribute="top" constant="100" id="vtb-nw-o2O"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Center" image="pencil.tip.crop.circle" catalog="system" id="2T9-eP-mX7"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WLr-U3-TvW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-804" y="1056"/>
+        </scene>
     </scenes>
+    <designables>
+        <designable name="Byw-Oi-234">
+            <size key="intrinsicContentSize" width="-1" height="49"/>
+        </designable>
+    </designables>
     <resources>
         <image name="1.square.fill" catalog="system" width="128" height="114"/>
         <image name="2.square.fill" catalog="system" width="128" height="114"/>
         <image name="3.square.fill" catalog="system" width="128" height="114"/>
         <image name="4.square.fill" catalog="system" width="128" height="114"/>
+        <image name="pencil.tip.crop.circle" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
