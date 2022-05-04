@@ -12,7 +12,7 @@
         <!--Item 2-->
         <scene sceneID="yBo-6y-gv9">
             <objects>
-                <viewController id="8y7-DT-hx7" sceneMemberID="viewController">
+                <viewController id="8y7-DT-hx7" customClass="SecondViewController" customModule="TabCommunication" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zZQ-jx-YJx">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -40,7 +40,7 @@
         <!--Item 3-->
         <scene sceneID="v98-2L-rU3">
             <objects>
-                <viewController id="j2g-Ye-Gof" sceneMemberID="viewController">
+                <viewController id="j2g-Ye-Gof" customClass="ThirdViewController" customModule="TabCommunication" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oLb-1J-W8v">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -207,10 +207,10 @@ Its Title will show up in the 4th tab
             </objects>
             <point key="canvasLocation" x="-1768" y="350"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--BaseTB Controller-->
         <scene sceneID="HkR-ak-9Ia">
             <objects>
-                <tabBarController id="Hb7-OV-nbp" sceneMemberID="viewController">
+                <tabBarController id="Hb7-OV-nbp" customClass="BaseTBController" customModule="TabCommunication" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Byw-Oi-234">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -219,8 +219,8 @@ Its Title will show up in the 4th tab
                     <connections>
                         <segue destination="HZU-Lj-fzH" kind="relationship" relationship="viewControllers" id="7qE-up-1Gv"/>
                         <segue destination="8y7-DT-hx7" kind="relationship" relationship="viewControllers" id="bM4-51-GCb"/>
-                        <segue destination="dgP-mE-QII" kind="relationship" relationship="viewControllers" id="6is-BU-j9Q"/>
                         <segue destination="j2g-Ye-Gof" kind="relationship" relationship="viewControllers" id="Su4-JT-lFw"/>
+                        <segue destination="HSb-Io-9Nc" kind="relationship" relationship="viewControllers" id="S2G-0g-fMJ"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EOy-eb-ePq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -253,14 +253,9 @@ Its Title will show up in the 4th tab
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WLr-U3-TvW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-804" y="1056"/>
+            <point key="canvasLocation" x="-829" y="1081"/>
         </scene>
     </scenes>
-    <designables>
-        <designable name="Byw-Oi-234">
-            <size key="intrinsicContentSize" width="-1" height="49"/>
-        </designable>
-    </designables>
     <resources>
         <image name="1.square.fill" catalog="system" width="128" height="114"/>
         <image name="2.square.fill" catalog="system" width="128" height="114"/>

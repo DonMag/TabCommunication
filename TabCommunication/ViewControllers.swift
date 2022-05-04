@@ -7,8 +7,32 @@
 
 import UIKit
 
-class HomeViewController: UIViewController {
+class BaseTBController: UITabBarController {
 	
+	var someTitle: String = ""
+	var valueData =  Double()
+
+}
+
+struct DataFieldOptions{
+	static func showValueAs(vcRef vc: UIViewController) -> String {
+		if let tbc = vc.tabBarController as? BaseTBController {
+			let v = Int(tbc.valueData) == 0 ? 100 : Int(tbc.valueData)
+			return "\(v)"
+		}
+		return ""
+	}
+}
+
+
+class HomeViewController: UIViewController {
+
+	override func viewDidAppear(_ animated: Bool) {
+		super.viewDidAppear(animated)
+		if let tbc = tabBarController as? BaseTBController {
+			//tbc.valueData += 1
+		}
+	}
 	@IBAction func gotTap(_ btn: UIButton) {
 		
 		// safely unwrap the optional button title
@@ -29,7 +53,7 @@ class HomeViewController: UIViewController {
 			resultVC.loadViewIfNeeded()
 			
 			// call the func, passing the button title
-			//resultVC.doAThing(btnTitle)
+			resultVC.doAThing(btnTitle)
 			
 			// switch to the 4th tab
 			tb.selectedIndex = 3
@@ -90,18 +114,25 @@ class HomeViewController: UIViewController {
 	
 }
 class SecondViewController: UIViewController {
-	
+	override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+		if let tbc = tabBarController as? BaseTBController {
+			print(tbc.valueData)
+		}
+	}
 }
 class ThirdViewController: UIViewController {
-	
+	override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+		let s = DataFieldOptions.showValueAs(vcRef: self)
+		print("s:", s)
+	}
 }
 class SearchViewController: UIViewController {
 	
 	@IBOutlet var resultLabel: UILabel!
 	
-//	func doAThing(_ str: String) {
-//		resultLabel.text = str
-//	}
+	func doAThing(_ str: String) {
+		resultLabel.text = str
+	}
 	func doAthing(_ sb: UISearchBar) {
 		
 	}
