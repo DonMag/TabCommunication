@@ -162,6 +162,9 @@ class TabView: UIView {
 	override func layoutSubviews() {
 		super.layoutSubviews()
 		
+		shapeLayer.path = createPath()
+		return()
+		
 		let middleRad: CGFloat = bounds.height - 10.0
 		
 		let cornerRad: CGFloat = 12.0
@@ -223,77 +226,31 @@ class TabView: UIView {
 		
 		shapeLayer.path = pth.cgPath
 		
-		return()
-/*
- //let r: CGFloat = 20
- 
- var pt1: CGPoint!
- var pt2: CGPoint!
 
-		pt2 = pt1
-		pt2.y = bounds.minY
-		pt2.x = bounds.midX - gap * 1.0
-		pth.addLine(to: pt2)
-		
-		pt2.y += gap * 0.5
-		pth.addArc(withCenter: pt2, radius: gap * 0.5, startAngle: -.pi * 0.5, endAngle: 0.0, clockwise: true)
-
-		pt2.x += gap * 1.0
-		pth.addArc(withCenter: pt2, radius: gap * 0.5, startAngle: .pi * 1.0, endAngle: 0.0, clockwise: false)
-
-		pt2.x += gap * 1.0
-		//pt2.y -= gap * 0.25
-		pth.addArc(withCenter: pt2, radius: gap * 0.5, startAngle: .pi * 1.0, endAngle: .pi * 1.5, clockwise: true)
-
-		pt1 = CGPoint(x: bounds.maxX, y: bounds.minY)
-		pth.addLine(to: pt1)
-
-		pt1 = CGPoint(x: bounds.maxX, y: bounds.maxY)
-		pth.addLine(to: pt1)
-		
-		pt1 = CGPoint(x: bounds.minX, y: bounds.maxY)
-		pth.addLine(to: pt1)
-		
-		pth.close()
-		
-		shapeLayer.path = pth.cgPath
-		
-		return()
-
-		pt1 = CGPoint(x: bounds.minX, y: bounds.maxY)
-		pth.move(to: pt1)
-		
-		pt1.y = bounds.minY + r
-		pt2 = pt1
-		pt2.x = bounds.minX + r
-		pth.addArc(withCenter: pt2, radius: r, startAngle: .pi, endAngle: .pi * 1.5, clockwise: true)
-		
-		pt1.x = bounds.midX - r
-		pt1.y = bounds.minY
-		pth.addLine(to: pt1)
-		
-		pt2 = pt1
-		pt2.y = bounds.minY + r
-		pth.addArc(withCenter: pt2, radius: r, startAngle: .pi * 1.5, endAngle: .pi * 2.0, clockwise: true)
-		
-		pt1.x = bounds.midX
-		pt1.y = bounds.midY - r
-		pth.addLine(to: pt1)
-		
-		pt2 = pt1
-		pt2.x = bounds.midX + r
-		pth.addArc(withCenter: pt2, radius: r, startAngle: .pi, endAngle: .pi * 0.5, clockwise: false)
-		
-		pt1.x = bounds.maxX
-		pt1.y = bounds.midY
-		pth.addLine(to: pt1)
-		
-		pt1.y = bounds.maxY
-		pth.addLine(to: pt1)
-		
-		pth.close()
-		
-		shapeLayer.path = pth.cgPath
-*/
 	}
+
+	public func createPath() -> CGPath {
+		
+		let height: CGFloat = bounds.height * 0.7
+		let path = UIBezierPath()
+		let centerWidth = bounds.width / 2
+		path.move(to: CGPoint(x: 0, y: 0)) // start top left
+		path.addLine(to: CGPoint(x: (centerWidth - height * 2), y: 0)) // the beginning of the trough
+		
+		path.addCurve(to: CGPoint(x: centerWidth, y: height),
+					  controlPoint1: CGPoint(x: (centerWidth - 30), y: 0),
+					  controlPoint2: CGPoint(x: centerWidth - 35, y: height))
+		
+		path.addCurve(to: CGPoint(x: (centerWidth + height * 2), y: 0),
+					  controlPoint1: CGPoint(x: centerWidth + 35, y: height),
+					  controlPoint2: CGPoint(x: (centerWidth + 30), y: 0))
+		
+		path.addLine(to: CGPoint(x: bounds.width, y: 0))
+		path.addLine(to: CGPoint(x: bounds.width, y: bounds.height))
+		path.addLine(to: CGPoint(x: 0, y: bounds.height))
+		path.close()
+		
+		return path.cgPath
+	}
+
 }
